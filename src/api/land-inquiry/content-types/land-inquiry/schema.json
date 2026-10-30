@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "land_inquiries",
+  "info": {
+    "singularName": "land-inquiry",
+    "pluralName": "land-inquiries",
+    "displayName": "LandInquiry"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "fullName": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "district": {
+      "type": "string"
+    },
+    "neighborhood": {
+      "type": "string"
+    },
+    "ada": {
+      "type": "string"
+    },
+    "parsel": {
+      "type": "string"
+    },
+    "serviceType": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "text"
+    },
+    "statue": {
+      "type": "enumeration",
+      "default": "Yeni ",
+      "enum": [
+        "Yeni ",
+        "Incelemede ",
+        "Tamamlandi"
+      ]
+    }
+  }
+}

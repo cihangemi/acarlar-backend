@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "singularName": "project",
+    "pluralName": "projects",
+    "displayName": "Project"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Slug": {
+      "type": "uid",
+      "targetField": "Title"
+    },
+    "Category": {
+      "type": "enumeration",
+      "enum": [
+        "Mimari ",
+        "Harita ",
+        "İnşaat & Hafriyat"
+      ]
+    },
+    "Location": {
+      "type": "string"
+    },
+    "CompletionYear": {
+      "type": "integer"
+    },
+    "IsFeatured": {
+      "type": "boolean"
+    },
+    "CoverImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Description": {
+      "type": "text"
+    },
+    "YoutubeVideoUrl": {
+      "type": "string"
+    }
+  }
+}
