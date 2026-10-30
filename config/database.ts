@@ -31,7 +31,7 @@ const config = ({ env }: Core.Config.Shared.ConfigParams): Core.Config.Database 
       },
       pool: { min: env.int('DATABASE_POOL_MIN', 2), max: env.int('DATABASE_POOL_MAX', 10) },
     },
-    postgres: {
+        postgres: {
       client: 'postgres',
       connection: {
         connectionString: env('DATABASE_URL'),
@@ -46,7 +46,7 @@ const config = ({ env }: Core.Config.Shared.ConfigParams): Core.Config.Database 
           ca: env('DATABASE_SSL_CA', undefined),
           capath: env('DATABASE_SSL_CAPATH', undefined),
           cipher: env('DATABASE_SSL_CIPHER', undefined),
-          rejectUnauthorized: env.bool('DATABASE_SSL_REJECT_UNAUTHORIZED', true),
+          rejectUnauthorized: env.bool('DATABASE_SSL_REJECT_UNAUTHORIZED', false), // ← true YERİNE false YAPILDI
         },
         schema: env('DATABASE_SCHEMA', 'public'),
       },
