@@ -494,7 +494,7 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
   };
   attributes: {
     Category: Schema.Attribute.Enumeration<
-      ['Mimari ', 'Harita ', '\u0130n\u015Faat & Hafriyat']
+      ['Mimari ', 'Harita ', '\u0130n\u015Faat & Hafriyat', 'Peyzaj']
     >;
     CompletionYear: Schema.Attribute.Integer;
     CoverImage: Schema.Attribute.Media<
@@ -504,6 +504,10 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     Description: Schema.Attribute.Text;
+    Gallery: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
     IsFeatured: Schema.Attribute.Boolean;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -518,6 +522,7 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    VideoFile: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     YoutubeVideoUrl: Schema.Attribute.String;
   };
 }
@@ -537,6 +542,7 @@ export interface ApiTeamMemberTeamMember extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    Description: Schema.Attribute.Text;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',

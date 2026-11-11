@@ -23,7 +23,8 @@
       "enum": [
         "Mimari ",
         "Harita ",
-        "İnşaat & Hafriyat"
+        "İnşaat & Hafriyat",
+        "Peyzaj"
       ]
     },
     "Location": {
@@ -50,6 +51,26 @@
     },
     "YoutubeVideoUrl": {
       "type": "string"
+    },
+    "Gallery": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "VideoFile": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     }
   }
 }
